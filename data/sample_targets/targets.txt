@@ -1,0 +1,15 @@
+# AegisStrike Sample Targets
+# WARNING: Only scan systems you own or have explicit written permission to test.
+# These are intentionally vulnerable/public targets for testing purposes.
+
+# Intentionally vulnerable web apps (authorized for testing)
+testphp.vulnweb.com
+testasp.vulnweb.com
+testaspnet.vulnweb.com
+
+# Bug bounty targets (check scope before scanning)
+# hackerone.com/programs
+
+# Your own infrastructure
+# yourdomain.com
+# 192.168.1.0/24

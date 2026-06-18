@@ -1,0 +1,23 @@
+# AegisStrike Configuration
+# WARNING: For authorized use only. See legal disclaimer in README.md.
+
+scanning:
+  threads: 10
+  timeout: 30
+  rate_limit: 10
+  user_agent: "AegisStrike/1.0 (Authorized Security Testing)"
+
+paths:
+  wordlists:
+    directories: "../wordlists/directories/common.txt"
+    subdomains: "../wordlists/subdomains/subdomains.txt"
+    parameters: "../wordlists/parameters/params.txt"
+
+modules:
+  passive: true
+  active: true
+  subdomains: true
+  ports: true
+  web: true
+  fingerprinting: true
+  vulns: true

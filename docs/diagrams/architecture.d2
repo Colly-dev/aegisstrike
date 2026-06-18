@@ -1,0 +1,97 @@
+direction: right
+
+CLI: "aegisstrike.py\n(CLI Entry Point)" {
+  shape: rectangle
+  style.fill: "#1a1a2e"
+  style.stroke: "#ff0000"
+  style.font-color: "#00ff41"
+}
+
+Engine: "core/engine.py\n(Orchestrator)" {
+  shape: rectangle
+  style.fill: "#16213e"
+  style.stroke: "#ff0000"
+  style.font-color: "#00ff41"
+}
+
+Passive: "Passive Recon\n(WHOIS, DNS, crt.sh\nGoogle Dorks, GitHub)" {
+  shape: rectangle
+  style.fill: "#0f3460"
+  style.stroke: "#00ff41"
+  style.font-color: "#ffffff"
+}
+
+Subdomains: "Subdomain Enum\n(Bruteforce, Permutation\nTakeover Detection)" {
+  shape: rectangle
+  style.fill: "#0f3460"
+  style.stroke: "#00ff41"
+  style.font-color: "#ffffff"
+}
+
+Active: "Active Recon\n(Host Discovery\nBanner Grabbing)" {
+  shape: rectangle
+  style.fill: "#0f3460"
+  style.stroke: "#ffcc00"
+  style.font-color: "#ffffff"
+}
+
+Ports: "Port Scanning\n(nmap / socket\nfallback)" {
+  shape: rectangle
+  style.fill: "#0f3460"
+  style.stroke: "#ffcc00"
+  style.font-color: "#ffffff"
+}
+
+Web: "Web Enumeration\n(gobuster / requests\nrobots.txt, params)" {
+  shape: rectangle
+  style.fill: "#0f3460"
+  style.stroke: "#ffcc00"
+  style.font-color: "#ffffff"
+}
+
+Fingerprint: "Fingerprinting\n(CMS, WAF\nCloud/CDN)" {
+  shape: rectangle
+  style.fill: "#0f3460"
+  style.stroke: "#ff6600"
+  style.font-color: "#ffffff"
+}
+
+Vulns: "Vuln Checks\n(Headers, CORS\nSSL, S3 Buckets)" {
+  shape: rectangle
+  style.fill: "#0f3460"
+  style.stroke: "#ff0000"
+  style.font-color: "#ffffff"
+}
+
+Intel: "Intelligence\n(CVE Mapping\nGeo, ASN)" {
+  shape: rectangle
+  style.fill: "#0f3460"
+  style.stroke: "#cc00ff"
+  style.font-color: "#ffffff"
+}
+
+Risk: "Risk Scoring\n(Attack Surface\nAnalysis)" {
+  shape: rectangle
+  style.fill: "#0f3460"
+  style.stroke: "#ff0000"
+  style.font-color: "#ffffff"
+}
+
+Reports: "Report Engine\n(HTML / JSON / CSV)" {
+  shape: rectangle
+  style.fill: "#1a1a2e"
+  style.stroke: "#00ff41"
+  style.font-color: "#00ff41"
+}
+
+CLI -> Engine
+Engine -> Passive
+Engine -> Subdomains
+Engine -> Active
+Engine -> Ports
+Engine -> Web
+Engine -> Fingerprint
+Engine -> Vulns
+Engine -> Intel
+Engine -> Risk
+Risk -> Reports

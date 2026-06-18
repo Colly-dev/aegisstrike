@@ -1,0 +1,2 @@
+# AegisStrike Test Output Log
+# Run: pytest tests/ -v --tb=short > tests/test_results/test_output.log

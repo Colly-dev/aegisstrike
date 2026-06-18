@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "legal_notice": "For authorized use only. See README.md for full disclaimer.",
+  "scanning": {
+    "threads": 10,
+    "timeout": 30,
+    "rate_limit": 10,
+    "user_agent": "AegisStrike/1.0 (Authorized Security Testing)"
+  },
+  "reporting": {
+    "output_dir": "reports",
+    "formats": ["html", "json", "csv"]
+  },
+  "modules": {
+    "passive": true,
+    "active": true,
+    "subdomains": true,
+    "ports": true,
+    "web": true,
+    "fingerprinting": true,
+    "vulns": true,
+    "intelligence": true
+  },
+  "wordlists": {
+    "directories": "wordlists/directories/common.txt",
+    "subdomains": "wordlists/subdomains/subdomains.txt",
+    "parameters": "wordlists/parameters/params.txt"
+  }
+}

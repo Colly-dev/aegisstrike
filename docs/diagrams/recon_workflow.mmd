@@ -1,0 +1,55 @@
+flowchart TD
+    A([Start AegisStrike]) --> B[Target Validation]
+    B --> C{Valid Target?}
+    C -- No --> D([Exit with Error])
+    C -- Yes --> E[Legal Disclaimer & Consent]
+    E --> F{User Accepts?}
+    F -- No --> D
+    F -- Yes --> G[Select Scan Mode]
+    
+    G --> H{Mode?}
+    
+    H -- passive --> I[Passive Recon Only]
+    I --> I1[WHOIS Lookup]
+    I --> I2[DNS Records]
+    I --> I3[crt.sh Enum]
+    I --> I4[Google Dorks]
+    
+    H -- full/subdomains --> J[Subdomain Enumeration]
+    J --> J1[DNS Bruteforce]
+    J --> J2[Permutation Scan]
+    J --> J3[Takeover Detection]
+    
+    H -- full/ports --> K[Port Scanning]
+    K --> K1{nmap available?}
+    K1 -- Yes --> K2[nmap Scan]
+    K1 -- No --> K3[Socket Fallback]
+    
+    H -- full/web --> L[Web Enumeration]
+    L --> L1[Directory Brute Force]
+    L --> L2[robots.txt Parser]
+    L --> L3[Parameter Discovery]
+    
+    H -- full/web --> M[Fingerprinting]
+    M --> M1[CMS Detection]
+    M --> M2[WAF Detection]
+    M --> M3[Cloud/CDN Detection]
+    
+    H -- full --> N[Vulnerability Checks]
+    N --> N1[Security Headers]
+    N --> N2[CORS Check]
+    N --> N3[Exposed Panels]
+    N --> N4[Weak SSL/TLS]
+    N --> N5[Open S3 Buckets]
+    
+    H -- full --> O[Intelligence]
+    O --> O1[CVE Mapping]
+    O --> O2[Geolocation]
+    O --> O3[ASN Lookup]
+    
+    I1 & I2 & I3 & I4 & J3 & K2 & K3 & L3 & M3 & N5 & O3 --> P[Risk Scoring]
+    P --> Q[Report Generation]
+    Q --> R1[HTML Report]
+    Q --> R2[JSON Report]
+    Q --> R3[CSV Report]
+    R1 & R2 & R3 --> S([Scan Complete])

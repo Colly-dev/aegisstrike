@@ -1,0 +1,10 @@
+AegisStrike Demo Video
+======================
+
+Demo video link: [Coming Soon - Add your demo video URL here]
+
+To record a demo:
+1. Install AegisStrike: pip install -r requirements.txt
+2. Run against an authorized target: python aegisstrike.py -t testphp.vulnweb.com --mode passive --report html
+3. Record the terminal output using asciinema or OBS
+4. Upload to YouTube/Asciinema and paste the link here
