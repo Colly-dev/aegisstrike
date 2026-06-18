@@ -104,17 +104,33 @@ Full architecture documentation: [`docs/architecture/architecture.md`](docs/arch
 
 ---
 
-## Installation
+## 🛠️ Installation
 
-### Requirements
-- Python 3.10+
-- pip
+### Prerequisites
+- **Python 3.10+**
+- **Git**
 
-### Basic Installation
+### Setup & OS-Specific Instructions
 
+#### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/aegisstrike.git
+git clone https://github.com/Colly-dev/aegisstrike.git
 cd aegisstrike
+```
+
+#### 2. Create and Activate Virtual Environment
+
+| Operating System | Command |
+| --- | --- |
+| **Windows (CMD)** | `python -m venv venv` <br> `venv\Scripts\activate` |
+| **Windows (PowerShell)** | `python -m venv venv` <br> `.\venv\Scripts\Activate.ps1` |
+| **Linux / macOS** | `python3 -m venv venv` <br> `source venv/bin/activate` |
+
+> **Note for Linux Users:** You might need to install `python3-venv` first if it's not present: `sudo apt install python3-venv`.
+
+#### 3. Install Dependencies
+Regardless of your OS, once the virtual environment is activated, run:
+```bash
 pip install -r requirements.txt
 ```
 
