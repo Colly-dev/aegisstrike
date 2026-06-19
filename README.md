@@ -55,18 +55,27 @@ python aegisstrike.py -t example.com --mode bugbounty --report html -v
 
 ---
 
-## Screenshots
+## 🖼️ Interface & Reporting
 
-> Screenshots will be available in [`docs/screenshots/`](docs/screenshots/) after running the tool.
+AegisStrike provides a professional command-line interface with real-time feedback and high-fidelity reporting.
 
-| Screenshot | Description |
-|---|---|
-| `banner_startup.png` | AegisStrike banner and legal disclaimer on startup |
-| `recon_in_progress.png` | Live reconnaissance with progress spinners |
-| `findings_table.png` | Rich terminal findings summary table |
-| `html_report.png` | Generated HTML report preview |
+### 1. Framework Initialization
+The framework starts with a comprehensive legal disclaimer and system initialization, ensuring all modules are correctly loaded.
+![AegisStrike Startup](docs/screenshots/banner_startup.png)
 
-See [`docs/reports/sample_recon_report.html`](docs/reports/sample_recon_report.html) for a sample HTML report.
+### 2. Real-Time Reconnaissance
+The engine provides live updates as it progresses through the reconnaissance phases, using multi-threaded execution for maximum efficiency.
+![Reconnaissance in Progress](docs/screenshots/recon_in_progress.png)
+
+### 3. Vulnerability Summary
+Upon completion, a structured summary of findings is presented directly in the terminal, categorized by severity and impact.
+![Findings Summary](docs/screenshots/findings_table.png)
+
+### 4. Professional Assessment Report
+AegisStrike generates detailed, dark-themed HTML reports suitable for executive summaries and technical deep-dives.
+![HTML Report Preview](docs/screenshots/html_report.png)
+
+> See [`docs/reports/sample_recon_report.html`](docs/reports/sample_recon_report.html) for a full sample report.
 
 ---
 
